@@ -12,3 +12,14 @@ body {
   font-style: normal;
   background-color: #101010;
 }
+
+.gradient {
+  background: rgb(52, 44, 212);
+  background: linear-gradient(
+    36deg,
+    rgba(52, 44, 212, 1) 0%,
+    rgba(224, 66, 136, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

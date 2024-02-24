@@ -15,9 +15,9 @@
     padding: 1rem 2rem;
   }
   .table {
-    text-align: left;
     width: 100%;
     th {
+      text-align: center;
       font-size: 1.25rem;
     }
     td,
@@ -43,7 +43,7 @@
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
     margin: 3rem 0rem;
     & > div {
       width: 60%;

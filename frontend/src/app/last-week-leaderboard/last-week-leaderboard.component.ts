@@ -29,4 +29,27 @@ export class LastWeekLeaderboardComponent implements OnInit {
     this.country = event.target.value.toUpperCase();
     this.getData();
   }
+  formatTimestamp(timestamp: string) {
+    const date = new Date(timestamp);
+    const months = [
+      'Jan',
+      'Feb',
+      'Mar',
+      'Apr',
+      'May',
+      'Jun',
+      'Jul',
+      'Aug',
+      'Sep',
+      'Oct',
+      'Nov',
+      'Dec',
+    ];
+    const day = ('0' + date.getDate()).slice(-2);
+    const monthAbbrev = months[date.getMonth()];
+    const year = date.getFullYear();
+
+    const formattedDate = `${day} ${monthAbbrev} ${year}`;
+    return formattedDate;
+  }
 }

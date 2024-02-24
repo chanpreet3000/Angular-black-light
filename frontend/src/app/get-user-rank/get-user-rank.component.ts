@@ -11,7 +11,7 @@ import { DataService } from '../data.service';
 })
 export class GetUserRankComponent implements OnInit {
   data: any[] = [];
-  uid: string = '92d7ff22-2a34-4a51-b81e-24ad0992cc61';
+  uid: string = '';
   rank: Number = -1;
 
   constructor(private dataService: DataService) {}
@@ -30,5 +30,28 @@ export class GetUserRankComponent implements OnInit {
   onInputChange(event: any): void {
     this.uid = event.target.value;
     this.getData();
+  }
+  formatTimestamp(timestamp: string) {
+    const date = new Date(timestamp);
+    const months = [
+      'Jan',
+      'Feb',
+      'Mar',
+      'Apr',
+      'May',
+      'Jun',
+      'Jul',
+      'Aug',
+      'Sep',
+      'Oct',
+      'Nov',
+      'Dec',
+    ];
+    const day = ('0' + date.getDate()).slice(-2);
+    const monthAbbrev = months[date.getMonth()];
+    const year = date.getFullYear();
+
+    const formattedDate = `${day} ${monthAbbrev} ${year}`;
+    return formattedDate;
   }
 }
