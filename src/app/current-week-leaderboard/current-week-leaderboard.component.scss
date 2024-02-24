@@ -1,0 +1,24 @@
+.container{
+    margin: 4rem;
+
+    .title{
+        font-weight: bold;
+        font-size: 3rem;
+    }
+    .sub-title{
+        font-size: 2rem;
+    }
+
+    .card{
+        background-color: black;
+        border-radius: 1rem;
+        padding: 1rem 2rem;
+    }
+    .table{
+        text-align: left;
+        width: 100%;
+        tr{
+            
+        }
+    }
+}

@@ -1,0 +1,23 @@
+<div class="container">
+  <h1 class="title">Global LeaderBoard</h1>
+  <h1 class="sub-title">Top 200</h1>
+
+  <div class="card-container">
+    <table class="table">
+      <tr>
+        <th>Rank</th>
+        <th>Name</th>
+        <th>Score</th>
+        <th>Country</th>
+        <th>Uid</th>
+      </tr>
+      <tr *ngFor="let item of data">
+        <td>1</td>
+        <td>{{ item.name }}</td>
+        <td>{{ item.score }}</td>
+        <td>{{ item.country }}</td>
+        <td>{{ item.uid }}</td>
+      </tr>
+    </table>
+  </div>
+</div>
