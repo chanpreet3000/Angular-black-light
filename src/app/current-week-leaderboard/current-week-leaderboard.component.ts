@@ -15,11 +15,8 @@ export class CurrentWeekLeaderboardComponent implements OnInit {
   constructor(private dataService: DataService) {}
 
   ngOnInit() {
-    this.dataService.getData().subscribe((data) => {
+    this.dataService.getCurrentWeekLeaderboardData().subscribe((data) => {
       this.data = data['result' as keyof object];
     });
-  }
-  stringify(item: any): string {
-    return JSON.stringify(item, null, 2); // 2 is for indentation
   }
 }
