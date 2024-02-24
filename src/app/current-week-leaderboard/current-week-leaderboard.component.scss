@@ -17,8 +17,24 @@
     .table{
         text-align: left;
         width: 100%;
+        th{
+            font-size: 1.25rem;
+        }
+        td, th{
+            padding: 1rem;
+            cursor: pointer;
+            margin: 1rem;
+            background-color: black;
+        }
         tr{
-            
+            transition: 0.25s all;
+            &:hover{
+                transform: scale(1.025);
+            }
+            &:nth-child(n+2):nth-child(-n+4){
+                color: yellow;
+                font-size: 1.25rem;
+            }
         }
     }
 }

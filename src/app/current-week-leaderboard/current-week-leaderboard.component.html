@@ -9,10 +9,10 @@
         <th>Name</th>
         <th>Score</th>
         <th>Country</th>
-        <th>Uid</th>
+        <th>Uid (use this for fetching user rank)</th>
       </tr>
-      <tr *ngFor="let item of data">
-        <td>1</td>
+      <tr *ngFor="let item of data; let i = index" class="row">
+        <td>{{ i + 1 }}</td>
         <td>{{ item.name }}</td>
         <td>{{ item.score }}</td>
         <td>{{ item.country }}</td>

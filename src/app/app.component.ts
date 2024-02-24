@@ -10,4 +10,8 @@ import { Router, RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'frontend';
+  constructor(private router: Router) {}
+  async goToLandingPage() {
+    this.router.navigate(['landing']);
+  }
 }
