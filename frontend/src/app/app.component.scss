@@ -1,4 +1,4 @@
-.container {
+.main-container2 {
   min-height: 100vh;
   width: 100%;
 }
@@ -6,9 +6,52 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2rem;
+  font-size: 2.25rem;
   padding: 1rem 0rem;
   font-weight: bold;
-  border-bottom: solid 2px #0f0f0fed;
-  background-color: rgb(9, 9, 9);
+  box-shadow: 0px 2px 15px 5px #ff01c421;
+  background-color: black;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: row;
+  margin: 4rem;
+  gap: 2rem;
+
+  .card-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 1rem;
+
+    .card {
+      width: 100%;
+      padding: 1rem;
+      font-size: 1.15rem;
+      cursor: pointer;
+      border-radius: 0.5rem;
+      background-color: #040403;
+      transition: 0.25s all;
+
+      &:hover {
+        background-color: #11110d;
+      }
+    }
+    .active {
+      font-size: 1.2rem;
+      color: white;
+      padding-left: 2rem;
+      background: rgb(52, 44, 212);
+      background: linear-gradient(
+        36deg,
+        rgba(52, 44, 212, 1) 0%,
+        rgba(224, 66, 136, 1) 100%
+      );
+    }
+  }
+  .router-container {
+    flex: 4.1;
+    background-color: black;
+  }
 }

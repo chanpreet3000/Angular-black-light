@@ -54,4 +54,8 @@ export class GetUserRankComponent implements OnInit {
     const formattedDate = `${day} ${monthAbbrev} ${year}`;
     return formattedDate;
   }
+  calculateDelay(index: number): string {
+    const delay = (index + 1) * 0.05;
+    return `${delay}s`;
+  }
 }

@@ -3,7 +3,6 @@ import { Routes, RouterModule } from '@angular/router';
 import { CurrentWeekLeaderboardComponent } from './current-week-leaderboard/current-week-leaderboard.component';
 import { LastWeekLeaderboardComponent } from './last-week-leaderboard/last-week-leaderboard.component';
 import { GetUserRankComponent } from './get-user-rank/get-user-rank.component';
-import { LandingComponent } from './landing/landing.component';
 export const routes: Routes = [
   {
     path: 'currentWeekLeaderboard',
@@ -11,8 +10,7 @@ export const routes: Routes = [
   },
   { path: 'lastWeekLeaderboard', component: LastWeekLeaderboardComponent },
   { path: 'getUserRank', component: GetUserRankComponent },
-  { path: 'landing', component: LandingComponent },
-  { path: '', redirectTo: '/landing', pathMatch: 'full' },
+  { path: '', redirectTo: '/currentWeekLeaderboard', pathMatch: 'full' },
 ];
 
 @NgModule({

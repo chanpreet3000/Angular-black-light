@@ -4,8 +4,8 @@
   <div class="input-container">
     <div>
       <div>
-        <div>Search For a Country Code</div>
-        <div>(eg. IN, RS, US, DK)</div>
+        <div class="gradient">Search For a Country Code</div>
+        <div class="gradient">(eg. IN, RS, US, DK)</div>
       </div>
       <input
         class="input-field"
@@ -27,7 +27,11 @@
         <th>Date Submitted</th>
         <th>UID</th>
       </tr>
-      <tr *ngFor="let item of data; let i = index" class="row">
+      <tr
+        *ngFor="let item of data; let i = index"
+        class="row fade-in"
+        [style.animation-delay]="calculateDelay(i)"
+      >
         <td>{{ i + 1 }}</td>
         <td>{{ item.name }}</td>
         <td>{{ item.score }}</td>
